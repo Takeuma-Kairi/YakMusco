@@ -7,77 +7,83 @@
 body{
   background-image: url("img/Background2.jpg");
   font-family: sans-serif;
-  font-size: 150%;
+  /* font-size: 150%; */
   /* height: 90vh; */
 }
 
-.column {
-  height: 100vh;
-  width: 100%;
-}
-.cat1 {
-  background-size: cover;
-  background: blue;
-}
-.cat2 {
-  background-size: cover;
-    background: red;
-}
+
 
 .home{
-  width:100%;
-  height:100%;
+  width:100vw;
+  height:100vh;
   text-align: center;
 }
 
 .big_button{
-  width:30%;
+  width:30vw;
   margin:4%;
 }
 
 .cmnd_button{
-  width:10%;
-  margin: 2%;
+  width: 10vw;
+  margin: 2vw;
 }
 
 .tachie{
-  width: 50vh;
+  height: 70vh;
   vertical-align: top;
 }
 
 .explain{
   display: inline-block;
-  width: 40%;
-  height: 40vh;
+  width: calc(80vw - 70vh);
+  min-width: 30vh;
+  height: 70vh;
   background: white;
-  border-radius: 10%;
-  padding: 1%;
-  border: orange double 30px;
+  border-radius: 5%;
+  /* padding: 1%; */
+  border: orange double 10px;
+  overflow: scroll;
+  
+  /* マイクロソフト、firefoxでの対応 */
+   -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* グーグル、サファリでの対応 */
+.explain::-webkit-scrollbar{
+  display: none;
 }
 
 .mondai{
   display: inline-block;
-  width: 80%;
+  width: 80vw;
   height: 40vh;
   background: white;
-  border-radius: 10%;
-  padding: 1%;
-  border: orange double 30px;
+  border-radius: 5%;
+ /*  padding: 1%; */
+  border: orange double 10px;
+  overflow: scroll;
+  
+  /* マイクロソフト、firefoxでの対応 */
+   -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* グーグル、サファリでの対応 */
+.mondai::-webkit-scrollbar{
+  display: none;
 }
 
 .q_tag{
-  height:5%;
+  height: 7vw;
   vertical-align: top;
-  margin-bottom: 5%;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
 }
 
-.yajirusi{
-  height:10%;
-  vertical-align: top;
-}
 
 .q_answer{
-  width: 20%;
+  width: 20vw;
   margin: 5%;
   margin-top:3%;
   vertical-align: top;
