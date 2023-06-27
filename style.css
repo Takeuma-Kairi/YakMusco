@@ -4,6 +4,13 @@
   }
 }
 
+body{
+  background-image: url("img/Background2.jpg");
+  font-family: sans-serif;
+  font-size: 150%;
+  /* height: 90vh; */
+}
+
 .column {
   height: 100vh;
   width: 100%;
@@ -20,15 +27,12 @@
 .home{
   width:100%;
   height:100%;
+  text-align: center;
 }
 
 .big_button{
-  width:40%;
-  margin:4%
-}
-
-body{
-  background-image: url("img/Background.jpg");
+  width:30%;
+  margin:4%;
 }
 
 .cmnd_button{
@@ -37,17 +41,44 @@ body{
 }
 
 .tachie{
-  width: 50%;
-  /* margin-top:10%; */
+  width: 50vh;
   vertical-align: top;
 }
 
 .explain{
   display: inline-block;
-  width: 20%;
-  height:40%;
+  width: 40%;
+  height: 40vh;
   background: white;
   border-radius: 10%;
-  padding: 10%;
+  padding: 1%;
   border: orange double 30px;
+}
+
+.mondai{
+  display: inline-block;
+  width: 80%;
+  height: 40vh;
+  background: white;
+  border-radius: 10%;
+  padding: 1%;
+  border: orange double 30px;
+}
+
+.q_tag{
+  height:5%;
+  vertical-align: top;
+  margin-bottom: 5%;
+}
+
+.yajirusi{
+  height:10%;
+  vertical-align: top;
+}
+
+.q_answer{
+  width: 20%;
+  margin: 5%;
+  margin-top:3%;
+  vertical-align: top;
 }
