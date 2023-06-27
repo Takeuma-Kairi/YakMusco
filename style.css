@@ -45,15 +45,8 @@ body{
   border: orange double 10px;
   overflow: scroll;
   
-  /* マイクロソフト、firefoxでの対応 */
-   -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-/* グーグル、サファリでの対応 */
-.explain::-webkit-scrollbar{
-  display: none;
-}
 
 .mondai{
   display: inline-block;
@@ -66,13 +59,13 @@ body{
   overflow: scroll;
   
   /* マイクロソフト、firefoxでの対応 */
-   -ms-overflow-style: none;
-    scrollbar-width: none;
+  /*  -ms-overflow-style: none;
+    scrollbar-width: none; */
 }
 /* グーグル、サファリでの対応 */
-.mondai::-webkit-scrollbar{
+/* .mondai::-webkit-scrollbar{
   display: none;
-}
+} */
 
 .q_tag{
   height: 7vw;
