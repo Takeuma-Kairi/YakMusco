@@ -22,10 +22,59 @@ body{
   margin:4%;
 }
 
-.cmnd_button{
-  width: 10vw;
-  margin: 2vw;
+
+
+@media screen and (orientation: landscape) {
+	.cmnd_button{
+		height: 10vh;
+		margin: 2vh;
+	}
+	
+	.q_tag{
+		height: 10vh;
+		vertical-align: top;
+		margin: 1vh;
+		margin-top: 2vh;
+	}
+	.yajirusi{
+		height: 10vh;
+		vertical-align: top;
+		margin: 1vh;
+		margin-top: 2vh;
+	}
+	.result{
+		height: 10vh;
+		vertical-align: top;
+		margin: 1vh;
+		margin-top: 2vh;
+	}
 }
+@media screen and (orientation: portrait) {
+	.cmnd_button{
+		width: 25vw;
+		margin: 2vw;
+	}
+	
+	.q_tag{
+		max-width: 7vw;
+		vertical-align: top;
+		margin: 0.5vw;
+		margin-top: 2vw;
+	}
+	.yajirusi{
+		max-width: 3.5vw;
+		vertical-align: top;
+		margin: 0.5vw;
+		margin-top: 2vw;
+	}
+	.result{
+		max-width: 14vw;
+		vertical-align: top;
+		margin: 0.5vw;
+		margin-top: 2vw;
+	}
+}
+
 
 .tachie{
   vertical-align: top;
@@ -61,47 +110,55 @@ body{
 		padding: 1vw;	
 		margin: 1vh;
 		width: 75vw;
-		height: calc(90vh - 70vw);
+		height: calc(80vh - 70vw);
 	}
 }
 
 .mondai{
   display: inline-block;
-  width: 80vw;
-  height: 40vh;
+  width: 90vw;
+  height: 50vh;
   background: white;
   border-radius: 5%;
  /*  padding: 1%; */
   border: orange double 10px;
   overflow: auto;
-  
-  /* マイクロソフト、firefoxでの対応 */
-  /*  -ms-overflow-style: none;
-    scrollbar-width: none; */
 }
-/* グーグル、サファリでの対応 */
-/* .mondai::-webkit-scrollbar{
-  display: none;
-} */
 
-.q_tag{
-  height: 7vw;
-  vertical-align: top;
-  margin-bottom: 5vh;
-  margin-top: 2vh;
-}
+
 
 
 .q_answer{
-  width: 20vw;
-  margin: 5%;
-  margin-top:3%;
   vertical-align: top;
+}
+@media screen and (orientation: landscape) {
+	.q_answer{
+		height: 15vh;
+		max-width: 25vw;
+		margin: 1vh;
+		margin-top:1vh;
+	}
+	
+	.q_tag{
+		height: 10vh;
+		vertical-align: top;
+		margin-bottom: 5vh;
+		margin-top: 2vh;
+	}
+}
+@media screen and (orientation: portrait) {
+	.q_answer{
+		width: 25vw;
+		margin: 1vw;
+		margin-top:1vw;
+	}
 }
 
 button{
-	background-color: #ffca86;
-	color: black;
+	background-color: #FF6600;
+	color: white;
 	margin:5px;
+	width: 45%;
+  border-radius: 10%;
 }
 
