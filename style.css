@@ -7,8 +7,6 @@
 body{
   background-image: url("img/Background2.jpg");
   font-family: sans-serif;
-  /* font-size: 150%; */
-  /* height: 90vh; */
 }
 
 
@@ -30,22 +28,42 @@ body{
 }
 
 .tachie{
-  height: 70vh;
   vertical-align: top;
 }
 
 .explain{
   display: inline-block;
-  width: calc(80vw - 70vh);
-  min-width: 30vh;
-  height: 70vh;
   background: white;
   border-radius: 5%;
-  /* padding: 1%; */
   border: orange double 10px;
   overflow: auto;
 }
 
+@media screen and (orientation: landscape) {
+  .tachie{
+		height: 80vh;
+	}
+	
+	.explain{
+		padding: 1vh;	
+		margin: 1vw;
+		height: 70vh;
+		width: calc(90vw - 80vh);
+	}
+}
+
+@media screen and (orientation: portrait) {
+  .tachie{
+		width: 80vw;
+	}
+	
+	.explain{
+		padding: 1vw;	
+		margin: 1vh;
+		width: 75vw;
+		height: calc(90vh - 70vw);
+	}
+}
 
 .mondai{
   display: inline-block;
@@ -80,3 +98,10 @@ body{
   margin-top:3%;
   vertical-align: top;
 }
+
+button{
+	background-color: #ffca86;
+	color: black;
+	margin:5px;
+}
+
