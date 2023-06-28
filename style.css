@@ -117,7 +117,7 @@ body{
 .mondai{
   display: inline-block;
   width: 90vw;
-  height: 50vh;
+  height: 45vh;
   background: white;
   border-radius: 5%;
  /*  padding: 1%; */
@@ -157,8 +157,13 @@ body{
 button{
 	background-color: #FF6600;
 	color: white;
-	margin:5px;
-	width: 45%;
+	margin:1em;
+	width: 40%;
   border-radius: 10%;
+	height: 5em;
 }
 
+.caption_span{
+	font-size: 150%;
+	font-weight: bold;
+}

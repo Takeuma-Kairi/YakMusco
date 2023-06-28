@@ -75,7 +75,7 @@ right_btn.src = "img/right.png";
 //======================================================
 function answering(n){
 
-  var hyouka = "<br>";
+  var hyouka = "<p>";
   
   switch(n){
     case 2:
@@ -107,7 +107,7 @@ function answering(n){
           hyouka += "不正解…";
         }
         
-        hyouka += "<br>" + quiz[quiz_num][2];
+        hyouka += "</p><p>" + quiz[quiz_num][2] + "</p>";
         document.getElementById("mondai").innerHTML += hyouka;
       }
       answering_phase = 1;
@@ -142,7 +142,7 @@ function quiz_restart(){
 }
 //======================================================
 function quiz_show(){
-  var mondaibun = "<h1>第" + (quiz_monme_num + 1) + "問</h1>" + quiz[quiz_num][0];
+  var mondaibun = '<p><span class="caption_span">第' + (quiz_monme_num + 1) + "問</span></p>" + quiz[quiz_num][0];
   document.getElementById("mondai").innerHTML = mondaibun;
   
   //---------------------------------------------------
@@ -250,7 +250,7 @@ function change_ran(rannum){
         <div style="width:100%;height:80%;display:inline-block">
           <img id="tachie" class="tachie" src=""/>
           <div id="explain" class="explain">
-            <h1 id="drug_nam">?</h1>
+            <p><span class="caption_span" id="drug_nam">?</span></p>
             <div id="drug_expl">?</div>
           </div>
         </div>
@@ -272,7 +272,6 @@ function change_ran(rannum){
           <img id="maru" class="q_answer" src="img/maru.png" onclick="answering(0)"/>
           <img id="batu" class="q_answer" src="img/batu.png" onclick="answering(1)"/>
           <img id="next_question" class="q_answer" src="img/next_question.png" onclick="answering(2)"/>
-          
         </div>
     </div>
   </body>
