@@ -9,7 +9,10 @@ body{
   font-family: sans-serif;
 }
 
-
+figure{
+	margin:auto;
+	display:inline-block;
+}
 
 .home{
   width:100vw;
@@ -19,7 +22,7 @@ body{
 
 .big_button{
   width:30vw;
-  margin:4%;
+  margin:1vw;
 }
 
 
@@ -76,9 +79,7 @@ body{
 }
 
 
-.tachie{
-  vertical-align: top;
-}
+
 
 .explain{
   display: inline-block;
@@ -88,8 +89,10 @@ body{
   overflow: auto;
 }
 
+
 @media screen and (orientation: landscape) {
   .tachie{
+		vertical-align: top;
 		height: 80vh;
 	}
 	
@@ -99,10 +102,22 @@ body{
 		height: 70vh;
 		width: calc(90vw - 80vh);
 	}
+	
+	.home_tachie{
+		max-height: 30vw;
+		display: inline-block;
+		margin: auto;
+	}
+	
+	.big_button{
+		width:30vw;
+		margin:1vw;
+	}
 }
 
 @media screen and (orientation: portrait) {
   .tachie{
+		vertical-align: top;
 		width: 80vw;
 	}
 	
@@ -111,6 +126,16 @@ body{
 		margin: 1vh;
 		width: 75vw;
 		height: calc(80vh - 70vw);
+	}
+	
+	.home_tachie{
+		max-width: 40vh;
+		margin: auto;
+	}
+	
+	.big_button{
+		width: 45vw;
+		margin: 1vw;
 	}
 }
 
