@@ -152,14 +152,14 @@ figure{
   .tachie{
 		vertical-align: top;
 		width: 70vw;
-		margin-left:5;
+		/* margin-left:5; */
 	}
 	
 	.explain{
 		padding: 1vw;	
 		height: calc(80vh - 80vw);
 		width: 80vw;
-		margin-left: 5vw;
+		/* margin-left: 5vw; */
 	}
 	
 	.home_tachie{
@@ -189,7 +189,7 @@ figure{
 }
 
 .mondai_result{
-	height: 65vh;
+	height: calc(40vh + 15vh);
 }
 
 
@@ -199,8 +199,8 @@ figure{
 	
 @media screen and (orientation: landscape) {
 	.q_answer{
-		height: 15vh;
-		max-width: 25vw;
+		/* height : 15vh;*/
+		width: 25vw;
 		margin: 1vh;
 		margin-top:1vh;
 	}
