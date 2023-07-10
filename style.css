@@ -46,8 +46,8 @@ figure{
 	.bookmark{
 		width: 9vw;
 		margin: 2vw;
-		margin-top:1.5vh;
-		vertical-align:top;
+		margin-top: 1.5vh;
+		vertical-align: top;
 	}
 	.q_tag{
 		height: 10vh;
@@ -72,15 +72,15 @@ figure{
 	.cmnd_button{
 		width: 20vw;
 		margin: 2vw;
-		margin-top:0.5vw;
-		vertical-align:top;
+		margin-top: 0.5vw;
+		vertical-align: top;
 	}
 	
 	.bookmark{
 		width: 9.8vw;
 		margin: 2vw;
-		margin-top:0.5vw;
-		vertical-align:top;
+		margin-top: 0.5vw;
+		vertical-align: top;
 	}
 	
 	.q_tag{
@@ -118,14 +118,15 @@ figure{
 @media screen and (orientation: landscape) {
   .tachie{
 		vertical-align: top;
-		width: 40vw;
+		height: 40vw;
+		max-height: 65vh;
 		margin:auto;
 	}
 	
 	.explain{
 		padding: 1vh;	
 		margin: 1vw;
-		height: 60vh;
+		height: 55vh;
 		width: 50vw;
 	}
 	
@@ -150,8 +151,8 @@ figure{
 @media screen and (orientation: portrait) {
   .tachie{
 		vertical-align: top;
-		width: 80vw;
-		margin-left:10vw;
+		width: 70vw;
+		margin-left:5;
 	}
 	
 	.explain{
@@ -180,10 +181,9 @@ figure{
 .mondai{
 	display: inline-block;
 	width: 90vw;
-	height: 45vh;
+	height: 40vh;
 	background: white;
 	border-radius: 5%;
- /*  padding: 1%; */
 	border: orange double 10px;
 	overflow: auto;
 }
