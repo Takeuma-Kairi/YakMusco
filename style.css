@@ -5,8 +5,17 @@
 }
 
 body{
-  background-image: url("img/Background2.jpg");
+  /* background-image: url("img/Background2.jpg"); */
   font-family: sans-serif;
+	padding: 0px;
+}
+
+.cain_body{
+	background-color: #e4efff;
+}
+
+.arr_body{
+	background-color: #ffefef;
 }
 
 figure{
@@ -31,8 +40,15 @@ figure{
 	.cmnd_button{
 		height: 10vh;
 		margin: 2vh;
+		vertical-align:top;
 	}
 	
+	.bookmark{
+		width: 9vw;
+		margin: 2vw;
+		margin-top:1.5vh;
+		vertical-align:top;
+	}
 	.q_tag{
 		height: 10vh;
 		vertical-align: top;
@@ -54,27 +70,36 @@ figure{
 }
 @media screen and (orientation: portrait) {
 	.cmnd_button{
-		width: 25vw;
+		width: 20vw;
 		margin: 2vw;
+		margin-top:0.5vw;
+		vertical-align:top;
+	}
+	
+	.bookmark{
+		width: 9.8vw;
+		margin: 2vw;
+		margin-top:0.5vw;
+		vertical-align:top;
 	}
 	
 	.q_tag{
-		max-width: 7vw;
+		max-width: 6.5vw;
 		vertical-align: top;
-		margin: 0.5vw;
-		margin-top: 2vw;
+		margin: 0.1vw;
+		margin-top: 0.7vw;
 	}
 	.yajirusi{
-		max-width: 3.5vw;
+		max-width: 3.3vw;
 		vertical-align: top;
-		margin: 0.5vw;
-		margin-top: 2vw;
+		margin: 0.1vw;
+		margin-top: 0.7vw;
 	}
 	.result{
-		max-width: 14vw;
+		max-width: 11.5vw;
 		vertical-align: top;
-		margin: 0.5vw;
-		margin-top: 2vw;
+		margin: 0.1vw;
+		margin-top: 0.7vw;
 	}
 }
 
@@ -93,14 +118,15 @@ figure{
 @media screen and (orientation: landscape) {
   .tachie{
 		vertical-align: top;
-		height: 80vh;
+		width: 40vw;
+		margin:auto;
 	}
 	
 	.explain{
 		padding: 1vh;	
 		margin: 1vw;
-		height: 70vh;
-		width: calc(90vw - 80vh);
+		height: 60vh;
+		width: 50vw;
 	}
 	
 	.home_tachie{
@@ -113,19 +139,26 @@ figure{
 		width:30vw;
 		margin:1vw;
 	}
+	
+	.setting_button{
+		width:62vw;
+		margin:1vw;
+	}
+		
 }
 
 @media screen and (orientation: portrait) {
   .tachie{
 		vertical-align: top;
 		width: 80vw;
+		margin-left:10vw;
 	}
 	
 	.explain{
 		padding: 1vw;	
-		margin: 1vh;
-		width: 75vw;
-		height: calc(80vh - 70vw);
+		height: calc(80vh - 80vw);
+		width: 80vw;
+		margin-left: 5vw;
 	}
 	
 	.home_tachie{
@@ -137,25 +170,33 @@ figure{
 		width: 45vw;
 		margin: 1vw;
 	}
+	
+	.setting_button{
+		width:92vw;
+		margin:1vw;
+	}
 }
 
 .mondai{
-  display: inline-block;
-  width: 90vw;
-  height: 45vh;
-  background: white;
-  border-radius: 5%;
+	display: inline-block;
+	width: 90vw;
+	height: 45vh;
+	background: white;
+	border-radius: 5%;
  /*  padding: 1%; */
-  border: orange double 10px;
-  overflow: auto;
+	border: orange double 10px;
+	overflow: auto;
 }
 
-
+.mondai_result{
+	height: 65vh;
+}
 
 
 .q_answer{
-  vertical-align: top;
+	vertical-align: top;
 }
+	
 @media screen and (orientation: landscape) {
 	.q_answer{
 		height: 15vh;
@@ -171,6 +212,7 @@ figure{
 		margin-top: 2vh;
 	}
 }
+
 @media screen and (orientation: portrait) {
 	.q_answer{
 		width: 25vw;
@@ -182,10 +224,11 @@ figure{
 button{
 	background-color: #FF6600;
 	color: white;
-	margin:1em;
-	width: 40%;
+	margin:1.5em;
+	width: 9em;
   border-radius: 10%;
 	height: 5em;
+	vertical-align:top;
 }
 
 .caption_span{
