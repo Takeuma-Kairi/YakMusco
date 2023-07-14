@@ -15,9 +15,13 @@ body{
 }
 
 .arr_body{
-	background-color: #ffefef;
+	background-image: url("img/arr_back.jpg");
+	/*background-color: #ffefef;*/
 }
-
+.hf_body{
+	background-image: url("img/hf_back.jpg");
+	/*background-color: #ffefef;*/
+}
 figure{
 	margin:auto;
 	display:inline-block;
