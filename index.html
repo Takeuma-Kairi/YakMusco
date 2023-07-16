@@ -3,7 +3,7 @@
 <head>
 <link href="style.css" rel="stylesheet">
 <meta charset="UTF-8"> <!--日本語-->
-<title>YakMusco v_0.1</title>
+<title>YakMusco v_1.2</title>
 <meta name="viewport" content="width=device-width" />
 <link rel="shortcut icon" href="img/ykmc.png" type="image/png">
 
@@ -15,7 +15,7 @@
 
   <body id="mybody" class="cain_body">
     <div class="home" id="home">
-        <h1>YakMusco v_1.1</h1>
+        <h1>YakMusco v_1.2</h1>
 				
 					<p>
 						<label for="unit-select">単元を選択:</label>
@@ -35,6 +35,10 @@
     <div class="" id="gallery" style="display:none">
         <img class="cmnd_button" src="img/home.png" onclick="change_ran(2)"/>
         <img class="cmnd_button" src="img/left_not_active.png" id="left_btn" onclick="change_img(chara_num-1)"/>
+        
+        <select id="chara_select" class="myselect" onchange="change_chara(this.value)">
+        </select>
+        
         <img class="cmnd_button" src="img/right.png" id="right_btn" onclick="change_img(chara_num+1)"/>
         
         <div style="width:100%;height:80%;display:inline-block;text-align:center;">
@@ -49,13 +53,18 @@
     
     <div class="" id="quiz" style="display:none">
         <img class="cmnd_button" src="img/home.png" onclick="change_ran(2)"/>
-        <img id="q1" class="q_tag" src="img/q_active.png" onclick="change_img(chara_num-1)"/>
+        <!-- <img id="q1" class="q_tag" src="img/q_active.png" onclick="change_img(chara_num-1)"/>
         <img class="yajirusi" src="img/yajirusi.png"/>
         <img id="q2" class="q_tag" src="img/q_not_active.png" onclick=""/>
         <img class="yajirusi" src="img/yajirusi.png"/>
         <img id="q3" class="q_tag" src="img/q_not_active.png" onclick=""/>
         <img class="yajirusi" src="img/yajirusi.png"/>
-        <img id="result" class="result" src="img/result_not_active.png" onclick=""/>
+        <img id="result" class="result" src="img/result_not_active.png" onclick=""/> -->
+        
+        <label id="mondai_select_label" for="mondai-select" class="myselect myselect_label">問題番号：</label>
+        <select id="mondai_select" class="myselect" onchange="change_mondai(this.value)">
+        </select>
+            
         <img id="bookmark" class="bookmark" src="img/non-bookmark.png" onclick="bookmarking()"/>
 				
         <div style="width:100%;height:80%;display:inline-block;text-align:center;">
