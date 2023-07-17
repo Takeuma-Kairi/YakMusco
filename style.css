@@ -22,6 +22,10 @@ body{
 	background-image: url("img/hf_back.jpg");
 	/*background-color: #ffefef;*/
 }
+.isc_body{
+	background-image: url("img/isc_back.jpg");
+	/*background-color: #ffefef;*/
+}
 figure{
 	margin:auto;
 	display:inline-block;
