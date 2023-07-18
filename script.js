@@ -43,8 +43,8 @@ var quiz= [[
 ["強心配糖体は、Na/Ca交換系を直接抑制し、心筋細胞内Ca濃度を増加させる", 1, "Na,K-ATPaseを阻害して、間接的にNa/Ca交感系を抑制する。", 0],
 ["強心配糖体は、房室伝導時間を短縮し、心電図上PR間隔を短縮する", 1, "房室結節を直接抑制することにより、房室間興奮電動を遅延させるため、PR間隔の延長を伴うことがある。", 0],
 ["強心配糖体は、心拍数を減少させるので、発作性上室性頻脈の治療に用いられる。", 0, "問題文の通り。迷走神経刺激作用や刺激伝導速度の抑制により心拍数を減少させる。", 0],
-["強心配糖体は、心室筋の自動性を高めるので、副作用として心室期外収縮を起こす", 0, "問題文の通り。"],
-["強心配糖体は、低カリウム血症を起こす利尿薬との併用により、ジギタリス中毒が増強される", 0, "問題文の通り。"],
+["強心配糖体は、心室筋の自動性を高めるので、副作用として心室期外収縮を起こす", 0, "問題文の通り。", 0],
+["強心配糖体は、低カリウム血症を起こす利尿薬との併用により、ジギタリス中毒が増強される", 0, "問題文の通り。", 0],
 ["リシノプリルは、アンジオテンシンⅡの分解を阻害して、心筋のリモデリングを抑制する", 1, "リシノプリルはACE阻害薬であり、アンジオテンシンⅡの生成を阻害することで心筋リモデリングを抑制する。また、血管を拡張させ心負荷を軽減する。", 0],
 ["心不全患者で、「座っていれば問題無いが、少し散歩するだけでも息切れがする」という症状の重症度は、NYHA機能分類はⅢ度（中等度～重症）にあたる", 0, "問題文の通り。Ⅰ度は「身体活動では症状無し」、Ⅱ度は「普通の身体活動で、疲労、呼吸困難などが出現し、通常の身体活動がある程度制限される」、Ⅲ度は「普通以下の身体活動で、愁訴出現し、通常の身体活動が高度に制限される」、Ⅳ度は、「安静時にも呼吸困難を示す」", 0]],
 
@@ -83,7 +83,7 @@ var chara=[[
 ["img/chara/nife.png", 0, "ニフェカラント", "<p>Ⅲ群の抗不整脈薬。</p><p>Kイオンチャネルを遮断する。活動電位持続時間を延長する。</p>"],
 
 ["img/chara/verap.png", 0, "ベラパミル", "<p>Ⅳ群の抗不整脈薬。</p><p>洞房結節や房室結節のL型Caチャネルを遮断することで、頻脈性不整脈を改善する。</p><p>ケシ属の植物(poppy)から単離される、血管拡張・鎮痙剤「パパベリン」の誘導体。</p>"],
-["img/chara/bepri.png", 0, "ベプリジル", "<p>Ⅳ群の抗不整脈薬。</p><p>洞房結節や房室結節のL型Caチャネルを遮断することで、頻脈性不整脈を改善する。</p><p>その他、Naチャネル、Caチャネルの遮断作用を示す。</p>"],
+["img/chara/bepri.png", 0, "ベプリジル", "<p>Ⅳ群の抗不整脈薬。</p><p>洞房結節や房室結節のL型Caチャネルを遮断することで、頻脈性不整脈を改善する。</p><p>その他、Naチャネル、Kチャネルの遮断作用を示す。</p>"],
 
 ["img/chara/atro.png", 0, "アトロピン", "<p>非選択的ムスカリン性アセチルコリン受容体遮断薬。</p><p>心拍数を増加させ、徐脈の治療に用いられる。</p><p>ベラドンナという植物の根っこ（ベラドンナコン）由来。</p><p>"],
 ["img/chara/isop.png", 0, "イソプレナリン", "<p>β刺激薬。</p><p>β1受容体刺激による心機能を促進させる。</p><p>名前の由来は、「アドレナリン」のメチル基を「イソプロピル基」に変えた構造であることから。</p><p>Raymond P. Ahlquistは、本薬を用いた研究で、アドレナリン受容体がαとβという2種類に分けられることを発見した。</p>"]
@@ -115,10 +115,158 @@ chara_get=[0,0];
 
 home_tachie = [0,0];
 
+save_sinsu = 
+["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", 
+"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+"k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
+"u", "v", "w", "x", "y", "z", "A", "B", "C", "D", 
+"E", "F", "G", "H", "I", "J", "K", "L", "M", "N", 
+"O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", 
+"Y", "Z", "!", "?"];
+
+//=========================================================
 function save_make(){
+	var unit_length = 0;
+	var ans = "";
+	var if_ryaku = true;
 	
+	for(var i = 0; i < quiz.length; i++){
+		var ans_temp = "";
+		
+		if((quiz[i].length / 6) != Math.floor(quiz[i].length / 6)){
+			unit_length = Math.floor(quiz[i].length / 6) + 1;
+		}else{
+			unit_length = Math.floor(quiz[i].length / 6);
+		}
+		
+		for(var j = 0; j< unit_length; j++){
+			var num_temp = 0;
+			
+			for(var k = 0; k<=5; k++){
+				if((j*6)+k >= quiz[i].length){
+					break;
+				}else if(quiz[i][(j*6)+k][3] != 0){
+					num_temp += Math.pow(2,k);
+				}
+			}
+			
+			if(num_temp != 0){
+				if_ryaku = false;
+			}
+			
+			ans_temp += save_sinsu[num_temp];
+		}
+		if(!if_ryaku){
+			ans += ans_temp;
+		}
+		
+		if_ryaku = true;
+		ans += ":";
+	}
+
+	ans += "&";
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	unit_length = 0;
+	if_ryaku = true;
+	
+	for(var i = 0; i < chara.length; i++){
+		var num_temp = chara[i].length-1;
+		for(var j=0; j< chara[i].length; j++){
+			if(chara[i][j][1] != 1){
+				num_temp = j-1;
+				break;
+			}
+		}
+		ans += (save_sinsu[num_temp] + ":");
+	}
+
+	document.getElementById("save_write").innerHTML = ans;
+				
 }
 
+//======================================================
+function mysaveindexOf(n){
+	return(save_sinsu.indexOf(n));
+}
+//======================================================
+
+function change64to2(n){
+	var ans = [0,0,0,0,0,0];
+	
+	var sin64 = n;
+	
+	for(var i=0; i<6; i++){
+		if(sin64 == 1){
+			ans[i] = 1;
+			break;
+		}else if(sin64 % 2 == 1){
+			ans[i] = 1;
+		}
+		sin64 = Math.floor(sin64/2);
+	}
+	
+	return(ans);
+}
+	
+//======================================================
+	
+function save_load(){
+	var str = prompt("セーブデータを入力してください。");
+	
+	try {
+		var kugiri = str.indexOf("&");
+		var quiz_save = str.substr(0, kugiri);
+		var chara_save = str.substr(kugiri+1);
+		
+		console.log(quiz_save);
+		console.log(chara_save);
+		
+		var quiz_save_unit_arr = quiz_save.split(":");
+		var chara_save_unit_arr = chara_save.split(":");
+		
+		
+		for(var i=0; i<quiz_save_unit_arr.length-1; i++){
+			var quiz_save_arr = quiz_save_unit_arr[i].split("");
+			
+			if(quiz_save_arr.length == 0){
+				alert("記帳無し:" + i);
+				for(var j=0; j< quiz[i] .length; j++){
+					quiz[i][j][3]=0;
+				}
+			}else{			
+				for(var j=0; j<quiz_save_arr.length;j++){
+					var temp_arr = change64to2(mysaveindexOf(quiz_save_arr[j]));
+					for(var k=0; k<6;k++){
+						if((j*6)+k < quiz[i].length){
+							quiz[i][(j*6)+k][3] = temp_arr[k];
+						}else{
+							break;
+						}
+					}
+				}		
+			}
+		}
+		
+		
+		for(var i=0; i< chara_save_unit_arr.length-1; i++){
+			var kakutokukokomade = mysaveindexOf(chara_save_unit_arr[i]);
+			for(var j=0; j<chara[i].length; j++){
+				if(j <= kakutokukokomade){
+					chara[i][j][1] = 1;
+				}else{
+					chara[i][j][1] = 0;
+				}
+			}
+		}
+		
+		alert("ロードが完了しました");
+		change_ran(2);
+		
+	} catch (error) {
+		alert("すみませんが、よくわかりませんでした。");
+	}
+}
 //======================================================
 function bookmarking(){
 	var img_bookmark = document.getElementById("bookmark");
@@ -430,7 +578,6 @@ function quiz_show(){
 			break;
   } */
   
-  
 }
 //======================================================
 function change_ran(rannum){
@@ -441,7 +588,7 @@ function change_ran(rannum){
     document.getElementById("home").style.display="none";
     document.getElementById("gallery").style.display="block";
     document.getElementById("quiz").style.display="none";
-    /* document.getElementById("setting").style.display="none"; */
+    document.getElementById("setting").style.display="none";
     change_img(0);
     break;
     
@@ -449,7 +596,7 @@ function change_ran(rannum){
     document.getElementById("home").style.display="block";
     document.getElementById("gallery").style.display="none";
     document.getElementById("quiz").style.display="none";
-    /* document.getElementById("setting").style.display="none"; */
+    document.getElementById("setting").style.display="none";
 		//change_home_chara();
     break;
     
@@ -457,17 +604,18 @@ function change_ran(rannum){
     document.getElementById("home").style.display="none";
     document.getElementById("gallery").style.display="none";
     document.getElementById("quiz").style.display="block";
-    /* document.getElementById("setting").style.display="none"; */
+    document.getElementById("setting").style.display="none";
     quiz_init();
     break;
     
-/* 		case 4:
+ 		case 4:
     document.getElementById("home").style.display="none";
     document.getElementById("gallery").style.display="none";
     document.getElementById("quiz").style.display="none";
     document.getElementById("setting").style.display="block";
+		save_make();
     break;
-		 */
+
 		
     default:
       alert("エラー！");

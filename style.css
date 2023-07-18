@@ -42,7 +42,15 @@ figure{
   margin:1vw;
 }
 
-
+table{
+	border: black solid 1px;
+	padding: 0px;
+}
+td{
+	border: black solid 1px;
+	margin: 0px;
+}
+	
 
 @media screen and (orientation: landscape) {
 	.cmnd_button{
