@@ -26,6 +26,11 @@ body{
 	background-image: url("img/isc_back.jpg");
 	/*background-color: #ffefef;*/
 }
+
+.bact_body{
+	background-image: url("img/bact_back.jpg");
+	/*background-color: #ffefef;*/
+}
 figure{
 	margin:auto;
 	display:inline-block;
