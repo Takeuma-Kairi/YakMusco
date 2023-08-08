@@ -13,7 +13,14 @@ body{
 .cain_body{
 	background-color: #e4efff;
 }
-
+.tb_body{
+	background-image: url("img/tb_back.jpg");
+	/*background-color: #ffefef;*/
+}
+.hypet_body{
+	background-image: url("img/hypet_back.jpg");
+	/*background-color: #ffefef;*/
+}
 .arr_body{
 	background-image: url("img/arr_back.jpg");
 	/*background-color: #ffefef;*/
